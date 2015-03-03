@@ -20,13 +20,22 @@
 			h1 {
 				font-size:28px;
 				font-weight:normal;
-				margin:24px 0 0 0;
+				margin:22px 0 0 0;
 				padding:0;
 			}
 			p {
 				font-size:12px;
 				margin:0 0 32px 0;
 				padding:0;
+			}
+			a {
+				font-size:12px;
+				color:#ccc;
+				text-decoration:none;
+				border-bottom:1px dotted #999;
+			}
+			a:hover {
+				color:#999;
 			}
 			label {
 				border-top:1px dotted #999;
@@ -61,15 +70,19 @@
 				border-width:0;
 				height:1px;
 				border-bottom:1px dotted #999;
-				margin:0 0 10px 0;
+				margin:32px 0 28px 0;
 				padding:0;
 			}
 		</style>
 	</head>
 	<body>
+
 		<h1>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</h1>
+
 		<p>Type Unicode Mathematical Alphanumeric Symbols (U+1D400–U+1D7FF).</p>
+
 		<form name="form" action="" method="POST">
+
 			<?php
 				function addFrakturRegular($str) {
 					$a = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
@@ -113,56 +126,41 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 
 			<br/>
 
-			<label>𝔉𝔯𝔞𝔨𝔱𝔲𝔯 ℜ𝔢𝔤𝔲𝔩𝔞𝔯</label>
+			<label title="𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷">𝔉𝔯𝔞𝔨𝔱𝔲𝔯 ℜ𝔢𝔤𝔲𝔩𝔞𝔯</label>
 			<textarea name="output1" readonly="readonly"><?php echo addFrakturRegular($_POST["input"]); ?></textarea>
 
-			<label>𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉</label>
+			<label title="𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟">𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉</label>
 			<textarea name="output2" readonly="readonly"><?php echo addFrakturBold($_POST["input"]); ?></textarea>
 
-			<label>𝒞𝒶𝓁𝓁𝒾ℊ𝓇𝒶𝓅𝒽𝓎 ℛℯℊ𝓊𝓁𝒶𝓇</label>
+			<label title="𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏">𝒞𝒶𝓁𝓁𝒾ℊ𝓇𝒶𝓅𝒽𝓎 ℛℯℊ𝓊𝓁𝒶𝓇</label>
 			<textarea name="output3" readonly="readonly"><?php echo addCalligraphyRegular($_POST["input"]); ?></textarea>
 
-			<label>𝓒𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝔂 𝓑𝓸𝓵𝓭</label>
+			<label title="𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃">𝓒𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝔂 𝓑𝓸𝓵𝓭</label>
 			<textarea name="output4" readonly="readonly"><?php echo addCalligraphyBold($_POST["input"]); ?></textarea>
 
-			<label>𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎𝚍</label>
+			<label title="𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿">𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎𝚍</label>
 			<textarea name="output5" readonly="readonly"><?php echo addMonospaced($_POST["input"]); ?></textarea>
 
-			<label>𝔹𝕝𝕒𝕔𝕜𝕓𝕠𝕒𝕣𝕕 𝔹𝕠𝕝𝕕</label>
+			<label title="𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡">𝔹𝕝𝕒𝕔𝕜𝕓𝕠𝕒𝕣𝕕 𝔹𝕠𝕝𝕕</label>
 			<textarea name="output6" readonly="readonly"><?php echo addBlackboardBold($_POST["input"]); ?></textarea>
 
 		</form>
-		<br/>
+
 		<hr/>
-		<br/>
-		<!-- fraktur regular -->
-		𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷
-		<!-- /fraktur regular -->
-		<br/>
-		<!-- fraktur bold -->
-		𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟
-		<!-- /fraktur bold -->
-		<br/>
-		<!-- calligraphy regular -->
-		𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏
-		<!-- /calligraphy regular -->
-		<br/>
-		<!-- calligraphy bold -->
-		𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃
-		<!-- /calligraphy bold -->
-		<br/>
-		<!-- monospaced -->
-		𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿
-		<!-- /monospaced -->
-		<br/>
-		<!-- blackboard bold -->
-		𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡
-		<!-- /blackboard bold -->
-		<br/>
-		<br/>
+
+		<p>
+			Source: <a href="https://github.com/dfkt/mathfont">https://github.com/dfkt/mathfont</a><br/>
+			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols</a> | <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">https://en.wikipedia.org/wiki/Letterlike_Symbols</a>
+		</p>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-60332908-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
 	</body>
 </html>
-
-<!-- http://en.wikipedia.org/wiki/Blackletter#Unicode -->
-<!-- http://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols#Latin_letters -->
-<!-- http://en.wikipedia.org/wiki/Letterlike_Symbols -->
