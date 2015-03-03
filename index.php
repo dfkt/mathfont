@@ -7,35 +7,43 @@
 		<style type="text/css">
 			* {
 				font-family:"Segoe UI","HelveticaNeue","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+				margin:0;
+				padding:0;
 			}
 			body,html {
 				background-color:#333;
 				color:#ccc;
 				text-align:left;
-				margin:0 12px;
+				margin:0;
+				padding:0 12px;
 			}
 			h1 {
 				font-size:28px;
 				font-weight:normal;
-				margin:24px 0;
+				margin:24px 0 0 0;
+				padding:0;
+			}
+			p {
+				font-size:12px;
+				margin:0 0 32px 0;
+				padding:0;
 			}
 			label {
 				border-top:1px dotted #999;
 				border-left:1px dotted #999;
 				border-right:1px dotted #999;
-				padding:0 8px;
 				margin:0;
+				padding:0 8px;
 			}
 			textarea {
 				background-color:#ccc;
 				color:#333;
 				border:1px dotted #333;
 				display:block;
-				padding:3px 6px;
-				margin:0 12px 16px 0;
-				min-width:320px;
-				width:98%;
+				width:99%;
 				height:72px;
+				margin:0 12px 16px 0;
+				padding:3px 6px;
 			}
 			input {
 				background-color:#ccc;
@@ -53,12 +61,15 @@
 				border-width:0;
 				height:1px;
 				border-bottom:1px dotted #999;
+				margin:0 0 10px 0;
+				padding:0;
 			}
 		</style>
 	</head>
 	<body>
 		<h1>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</h1>
-		<form name="form" action="" method="GET">
+		<p>Type Unicode Mathematical Alphanumeric Symbols (U+1D400–U+1D7FF).</p>
+		<form name="form" action="" method="POST">
 			<?php
 				function addFrakturRegular($str) {
 					$a = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
@@ -91,35 +102,35 @@
 					return str_replace($a, $b, $str);
 				}
 			?>
-			
-			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. See if I care.
 
-Works in FF and IE11. Somewhat works in Opera. Does not work in Chrome, I guess.</textarea>
+			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
+Works in FF and IE11. Somewhat works in Opera. Does not work in Chrome, I guess.
+Might depend on your OS and/or font's Unicode capabilities.</textarea>
 
 			<br/>
-			
+
 			<input type="submit"  value="☞ 𝔇𝔬 𝔰𝔬𝔪𝔢𝔱𝔥𝔦𝔫𝔤. ☜" />
-			
+
 			<br/>
-			
+
 			<label>𝔉𝔯𝔞𝔨𝔱𝔲𝔯 ℜ𝔢𝔤𝔲𝔩𝔞𝔯</label>
-			<textarea name="output1" readonly="readonly"><?php echo addFrakturRegular($_GET["input"]); ?></textarea>
-			
+			<textarea name="output1" readonly="readonly"><?php echo addFrakturRegular($_POST["input"]); ?></textarea>
+
 			<label>𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉</label>
-			<textarea name="output2" readonly="readonly"><?php echo addFrakturBold($_GET["input"]); ?></textarea>
-			
+			<textarea name="output2" readonly="readonly"><?php echo addFrakturBold($_POST["input"]); ?></textarea>
+
 			<label>𝒞𝒶𝓁𝓁𝒾ℊ𝓇𝒶𝓅𝒽𝓎 ℛℯℊ𝓊𝓁𝒶𝓇</label>
-			<textarea name="output3" readonly="readonly"><?php echo addCalligraphyRegular($_GET["input"]); ?></textarea>
-			
+			<textarea name="output3" readonly="readonly"><?php echo addCalligraphyRegular($_POST["input"]); ?></textarea>
+
 			<label>𝓒𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝔂 𝓑𝓸𝓵𝓭</label>
-			<textarea name="output4" readonly="readonly"><?php echo addCalligraphyBold($_GET["input"]); ?></textarea>
-			
+			<textarea name="output4" readonly="readonly"><?php echo addCalligraphyBold($_POST["input"]); ?></textarea>
+
 			<label>𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎𝚍</label>
-			<textarea name="output5" readonly="readonly"><?php echo addMonospaced($_GET["input"]); ?></textarea>
-			
+			<textarea name="output5" readonly="readonly"><?php echo addMonospaced($_POST["input"]); ?></textarea>
+
 			<label>𝔹𝕝𝕒𝕔𝕜𝕓𝕠𝕒𝕣𝕕 𝔹𝕠𝕝𝕕</label>
-			<textarea name="output6" readonly="readonly"><?php echo addBlackboardBold($_GET["input"]); ?></textarea>
-			
+			<textarea name="output6" readonly="readonly"><?php echo addBlackboardBold($_POST["input"]); ?></textarea>
+
 		</form>
 		<br/>
 		<hr/>
