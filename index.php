@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -79,7 +79,7 @@
 
 		<h1>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</h1>
 
-		<p>Type Unicode Mathematical Alphanumeric Symbols (U+1D400–U+1D7FF).</p>
+		<p>Type Unicode mathematical alphanumeric symbols (U+1D400–1D7FF) and fullwidth forms (U+FF00–FFEF).</p>
 
 		<form name="form" action="" method="POST">
 
@@ -114,10 +114,15 @@
 					$b = array('𝔸', '𝔹', 'ℂ', '𝔻', '𝔼', '𝔽', '𝔾', 'ℍ', '𝕀', '𝕁', '𝕂', '𝕃', '𝕄', 'ℕ', '𝕆', 'ℙ', 'ℚ', 'ℝ', '𝕊', '𝕋', '𝕌', '𝕍', '𝕎', '𝕏', '𝕐', 'ℤ', '𝕒', '𝕓', '𝕔', '𝕕', '𝕖', '𝕗', '𝕘', '𝕙', '𝕚', '𝕛', '𝕜', '𝕝', '𝕞', '𝕟', '𝕠', '𝕡', '𝕢', '𝕣', '𝕤', '𝕥', '𝕦', '𝕧', '𝕨', '𝕩', '𝕪', '𝕫', '𝟘', '𝟙', '𝟚', '𝟛', '𝟜', '𝟝', '𝟞', '𝟟', '𝟠', '𝟡');
 					return str_replace($a, $b, $str);
 				}
+				function addFullwidth($str) {
+					$a = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "\x27", "\x28", "\x29", '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "\x5c", ']', '^', '_', '`', '{', '|', '}', '~', ' ');
+					$b = array('Ａ', 'Ｂ', 'Ｃ', 'Ｄ', 'Ｅ', 'Ｆ', 'Ｇ', 'Ｈ', 'Ｉ', 'Ｊ', 'Ｋ', 'Ｌ', 'Ｍ', 'Ｎ', 'Ｏ', 'Ｐ', 'Ｑ', 'Ｒ', 'Ｓ', 'Ｔ', 'Ｕ', 'Ｖ', 'Ｗ', 'Ｘ', 'Ｙ', 'Ｚ', 'ａ', 'ｂ', 'ｃ', 'ｄ', 'ｅ', 'ｆ', 'ｇ', 'ｈ', 'ｉ', 'ｊ', 'ｋ', 'ｌ', 'ｍ', 'ｎ', 'ｏ', 'ｐ', 'ｑ', 'ｒ', 'ｓ', 'ｔ', 'ｕ', 'ｖ', 'ｗ', 'ｘ', 'ｙ', 'ｚ', '０', '１', '２', '３', '４', '５', '６', '７', '８', '９', '！', '＂', '＃', '＄', '％', '＆', '＇', '（', '）', '＊', '＋', '，', '－', '．', '／', '：', '；', '＜', '＝', '＞', '？', '＠', '［', '＼', '］', '＾', '＿', '｀', '｛', '｜', '｝', '～', '　');
+					return str_replace($a, $b, $str);
+				}
 			?>
 
 			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
-Works in FF and IE11. Somewhat works in Opera. Does not work in Chrome, I guess.
+Works in FF and IE11. Somewhat works in Opera. Doesn't really work in Chrome, I guess.
 Might depend on your OS and/or font's Unicode capabilities.</textarea>
 
 			<br/>
@@ -144,13 +149,16 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 			<label title="𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡">𝔹𝕝𝕒𝕔𝕜𝕓𝕠𝕒𝕣𝕕 𝔹𝕠𝕝𝕕</label>
 			<textarea name="output6" readonly="readonly"><?php echo addBlackboardBold($_POST["input"]); ?></textarea>
 
+			<label title="ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～　">Ｆｕｌｌｗｉｄｔｈ Ｆｏｒｍｓ</label>
+			<textarea name="output6" readonly="readonly"><?php echo addFullwidth($_POST["input"]); ?></textarea>
+
 		</form>
 
 		<hr/>
 
 		<p>
 			Source: <a href="https://github.com/dfkt/mathfont">https://github.com/dfkt/mathfont</a><br/>
-			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols</a> | <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">https://en.wikipedia.org/wiki/Letterlike_Symbols</a>
+			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms</a>
 		</p>
 
 	</body>
