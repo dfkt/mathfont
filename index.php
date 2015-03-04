@@ -6,7 +6,7 @@
 		<title>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</title>
 		<style type="text/css">
 			* {
-				font-family:"Segoe UI","HelveticaNeue","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+				font-family:sans-serif;
 				margin:0;
 				padding:0;
 			}
