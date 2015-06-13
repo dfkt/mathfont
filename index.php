@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta charset="UTF-8" />
+		<meta name="google-site-verification" content="TSyQxKZ7nPQHEezNX7DYqVoc8qG6HP805AkvDeLLO7k" />
 		<title>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</title>
 		<style type="text/css">
 			* {
@@ -79,7 +80,7 @@
 
 		<h1>𝔐𝔞𝔱𝔥𝔉𝔬𝔫𝔱</h1>
 
-		<p>Type Unicode mathematical alphanumeric symbols (U+1D400–1D7FF) and fullwidth forms (U+FF00–FFEF).</p>
+		<p>Type Unicode nonsense. Impress your friends.</p>
 
 		<form name="form" action="" method="POST">
 
@@ -119,6 +120,11 @@
 					$b = array('Ａ', 'Ｂ', 'Ｃ', 'Ｄ', 'Ｅ', 'Ｆ', 'Ｇ', 'Ｈ', 'Ｉ', 'Ｊ', 'Ｋ', 'Ｌ', 'Ｍ', 'Ｎ', 'Ｏ', 'Ｐ', 'Ｑ', 'Ｒ', 'Ｓ', 'Ｔ', 'Ｕ', 'Ｖ', 'Ｗ', 'Ｘ', 'Ｙ', 'Ｚ', 'ａ', 'ｂ', 'ｃ', 'ｄ', 'ｅ', 'ｆ', 'ｇ', 'ｈ', 'ｉ', 'ｊ', 'ｋ', 'ｌ', 'ｍ', 'ｎ', 'ｏ', 'ｐ', 'ｑ', 'ｒ', 'ｓ', 'ｔ', 'ｕ', 'ｖ', 'ｗ', 'ｘ', 'ｙ', 'ｚ', '０', '１', '２', '３', '４', '５', '６', '７', '８', '９', '！', '＂', '＃', '＄', '％', '＆', '＇', '（', '）', '＊', '＋', '，', '－', '．', '／', '：', '；', '＜', '＝', '＞', '？', '＠', '［', '＼', '］', '＾', '＿', '｀', '｛', '｜', '｝', '～', '　');
 					return str_replace($a, $b, $str);
 				}
+				function addRegionalIndicator($str) {
+					$a = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+					$b = array('🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿', '🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿');
+					return str_replace($a, $b, $str);
+				}
 			?>
 
 			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
@@ -152,13 +158,16 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 			<label title="ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～　">Ｆｕｌｌｗｉｄｔｈ Ｆｏｒｍｓ</label>
 			<textarea name="output6" readonly="readonly"><?php echo addFullwidth($_POST["input"]); ?></textarea>
 
+			<label title="🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿">🇷🇪🇬🇮🇴🇳🇦🇱 🇮🇳🇩🇮🇨🇦🇹🇴🇷 🇸🇾🇲🇧🇴🇱🇸</label>
+			<textarea name="output6" readonly="readonly"><?php echo addRegionalIndicator($_POST["input"]); ?></textarea>
+
 		</form>
 
 		<hr/>
 
 		<p>
 			Source: <a href="https://github.com/dfkt/mathfont">https://github.com/dfkt/mathfont</a><br/>
-			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms</a>
+			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols (U+1D400–1D7FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms (U+FF00–FFEF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Regional_Indicator_Symbol">Regional Indicator Symbols (U+1F1E6–1F1FF)</a>
 		</p>
 
 	</body>
