@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -125,6 +125,11 @@
 					$b = array('🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿', '🇦', '🇧', '🇨', '🇩', '🇪', '🇫', '🇬', '🇭', '🇮', '🇯', '🇰', '🇱', '🇲', '🇳', '🇴', '🇵', '🇶', '🇷', '🇸', '🇹', '🇺', '🇻', '🇼', '🇽', '🇾', '🇿');
 					return str_replace($a, $b, $str);
 				}
+				function addFakeCherokee($str) {
+					$a = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+					$b = array('Ꭿ', 'Ꮟ', 'Ꮸ', 'Ꭷ', 'Ꮛ', 'Ꮀ', 'Ꮆ', 'Ꮒ', 'Ꭵ', 'Ꮰ', 'Ꮶ', 'Ꮭ', 'Ꮇ', 'Ꮑ', 'Ꮻ', 'Ꭾ', 'Ꮕ', 'Ꮢ', 'Ꭶ', 'Ꮠ', 'Ꮼ', 'Ꮙ', 'Ꮚ', 'Ꮿ', 'Ꮍ', 'Ꮓ', 'Ꭺ', 'Ᏼ', 'Ꮯ', 'Ꭰ', 'Ꭼ', 'Ꮀ', 'Ꮐ', 'Ꮋ', 'Ꭵ', 'Ꭻ', 'Ꮶ', 'Ꮮ', 'Ꮇ', 'Ꮑ', 'Ꮎ', 'Ꮲ', 'Ꮔ', 'Ꭱ', 'Ꮪ', 'Ꭲ', 'Ꮜ', 'Ꮩ', 'Ꮃ', 'Ꮿ', 'Ꭹ', 'Ꮓ');
+					return str_replace($a, $b, $str);
+				}
 			?>
 
 			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
@@ -161,13 +166,16 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 			<label title="🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿">🇷🇪🇬🇮🇴🇳🇦🇱 🇮🇳🇩🇮🇨🇦🇹🇴🇷 🇸🇾🇲🇧🇴🇱🇸</label>
 			<textarea name="output6" readonly="readonly"><?php echo addRegionalIndicator($_POST["input"]); ?></textarea>
 
+			<label title="ᎪᏴᏟᎠᎬᎰᏀᎻᎥᎫᏦᏞᎷᏁᎾᏢᏄᎡᏚᎢᏌᏙᎳᏯᎩᏃᎯᏏᏨᎧᏋᎰᎶᏂᎥᏠᏦᏝᎷᏁᏫᎮᏅᏒᎦᏐᏬᏉᏊᏯᎽᏃ">ᎰᎪᏦᎬ ᏟᎻᎬᎡᎾᏦᎬᎬ</label>
+			<textarea name="output6" readonly="readonly"><?php echo addFakeCherokee($_POST["input"]); ?></textarea>
+
 		</form>
 
 		<hr/>
 
 		<p>
 			Source: <a href="https://github.com/dfkt/mathfont">https://github.com/dfkt/mathfont</a><br/>
-			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols (U+1D400–1D7FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms (U+FF00–FFEF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Regional_Indicator_Symbol">Regional Indicator Symbols (U+1F1E6–1F1FF)</a>
+			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols (U+1D400–1D7FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms (U+FF00–FFEF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Regional_Indicator_Symbol">Regional Indicator Symbols (U+1F1E6–1F1FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Cherokee_%28Unicode_block%29">Cherokee (U+13A0–13F4)</a>
 		</p>
 
 	</body>
