@@ -161,13 +161,13 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 			<textarea name="output6" readonly="readonly"><?php echo addBlackboardBold($_POST["input"]); ?></textarea>
 
 			<label title="ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝～　">Ｆｕｌｌｗｉｄｔｈ Ｆｏｒｍｓ</label>
-			<textarea name="output6" readonly="readonly"><?php echo addFullwidth($_POST["input"]); ?></textarea>
+			<textarea name="output7" readonly="readonly"><?php echo addFullwidth($_POST["input"]); ?></textarea>
 
 			<label title="🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿">🇷🇪🇬🇮🇴🇳🇦🇱 🇮🇳🇩🇮🇨🇦🇹🇴🇷 🇸🇾🇲🇧🇴🇱🇸</label>
-			<textarea name="output6" readonly="readonly"><?php echo addRegionalIndicator($_POST["input"]); ?></textarea>
+			<textarea name="output8" readonly="readonly"><?php echo addRegionalIndicator($_POST["input"]); ?></textarea>
 
 			<label title="ᎪᏴᏟᎠᎬᎰᏀᎻᎥᎫᏦᏞᎷᏁᎾᏢᏄᎡᏚᎢᏌᏙᎳᏯᎩᏃᎯᏏᏨᎧᏋᎰᎶᏂᎥᏠᏦᏝᎷᏁᏫᎮᏅᏒᎦᏐᏬᏉᏊᏯᎽᏃ">ᎰᎪᏦᎬ ᏟᎻᎬᎡᎾᏦᎬᎬ</label>
-			<textarea name="output6" readonly="readonly"><?php echo addFakeCherokee($_POST["input"]); ?></textarea>
+			<textarea name="output9" readonly="readonly"><?php echo addFakeCherokee($_POST["input"]); ?></textarea>
 
 		</form>
 
