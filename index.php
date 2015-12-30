@@ -133,7 +133,7 @@
 			?>
 
 			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
-Works in FF and IE11. Somewhat works in Opera. Doesn't really work in Chrome, I guess.
+Works in FF, Vivaldi, and IE11. Somewhat works in Opera. Doesn't really work in Chrome, I guess.
 Might depend on your OS and/or font's Unicode capabilities.</textarea>
 
 			<br/>
