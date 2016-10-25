@@ -130,6 +130,11 @@
 					$b = array('Ꭿ', 'Ꮟ', 'Ꮸ', 'Ꭷ', 'Ꮛ', 'Ꮀ', 'Ꮆ', 'Ꮒ', 'Ꭵ', 'Ꮰ', 'Ꮶ', 'Ꮭ', 'Ꮇ', 'Ꮑ', 'Ꮻ', 'Ꭾ', 'Ꮕ', 'Ꮢ', 'Ꭶ', 'Ꮠ', 'Ꮼ', 'Ꮙ', 'Ꮚ', 'Ꮿ', 'Ꮍ', 'Ꮓ', 'Ꭺ', 'Ᏼ', 'Ꮯ', 'Ꭰ', 'Ꭼ', 'Ꮀ', 'Ꮐ', 'Ꮋ', 'Ꭵ', 'Ꭻ', 'Ꮶ', 'Ꮮ', 'Ꮇ', 'Ꮑ', 'Ꮎ', 'Ꮲ', 'Ꮔ', 'Ꭱ', 'Ꮪ', 'Ꭲ', 'Ꮜ', 'Ꮩ', 'Ꮃ', 'Ꮿ', 'Ꭹ', 'Ꮓ');
 					return str_replace($a, $b, $str);
 				}
+				function addFuthark($str) {
+					$a = array('TH', 'Th', 'AE', 'Ae', 'Æ', 'Ä', 'NG', 'Ng', 'OE', 'Oe', 'Ø', 'Œ', 'Ö', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'th', 'ae', 'æ', 'ä', 'ng', 'oe', 'œ', 'ø', 'ö', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+					$b = array('ᚦ', 'ᚦ', 'ᛇ', 'ᛇ', 'ᛇ', 'ᛇ', 'ᛜ', 'ᛜ', 'ᚯ', 'ᚯ', 'ᚯ', 'ᚯ', 'ᚯ', 'ᚨ', 'ᛒ', 'ᚳ', 'ᛞ', 'ᛖ', 'ᚠ', 'ᚷ', 'ᚺ', 'ᛁ', 'ᛃ', 'ᚲ', 'ᛚ', 'ᛗ', 'ᚾ', 'ᛟ', 'ᛈ', 'ᛢ', 'ᚱ', 'ᛋ', 'ᛏ', 'ᚢ', 'ᚡ', 'ᚹ', 'ᛪ', 'ᚣ', 'ᛉ', 'ᚦ', 'ᛇ', 'ᛇ', 'ᛇ', 'ᛜ', 'ᚯ', 'ᚯ', 'ᚯ', 'ᚯ', 'ᚨ', 'ᛒ', 'ᚳ', 'ᛞ', 'ᛖ', 'ᚠ', 'ᚷ', 'ᚺ', 'ᛁ', 'ᛃ', 'ᚲ', 'ᛚ', 'ᛗ', 'ᚾ', 'ᛟ', 'ᛈ', 'ᛢ', 'ᚱ', 'ᛋ', 'ᛏ', 'ᚢ', 'ᚡ', 'ᚹ', 'ᛪ', 'ᚣ', 'ᛉ');
+					return str_replace($a, $b, $str);
+				}
 			?>
 
 			<textarea name="input" onclick="this.value='';">Write something in this text box. Or don't. It's a free country after all.
@@ -169,13 +174,16 @@ Might depend on your OS and/or font's Unicode capabilities.</textarea>
 			<label title="ᎪᏴᏟᎠᎬᎰᏀᎻᎥᎫᏦᏞᎷᏁᎾᏢᏄᎡᏚᎢᏌᏙᎳᏯᎩᏃᎯᏏᏨᎧᏋᎰᎶᏂᎥᏠᏦᏝᎷᏁᏫᎮᏅᏒᎦᏐᏬᏉᏊᏯᎽᏃ">ᎰᎪᏦᎬ ᏟᎻᎬᎡᎾᏦᎬᎬ</label>
 			<textarea name="output9" readonly="readonly"><?php echo addFakeCherokee($_POST["input"]); ?></textarea>
 
+			<label title="ᚦᛇᛜᚯᚨᛒᚳᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᛢᚱᛋᛏᚢᚡᚹᛪᚣᛉ">ᚠᚢᚦᚨᚱᚲ</label>
+			<textarea name="output10" readonly="readonly"><?php echo addFuthark($_POST["input"]); ?></textarea>
+
 		</form>
 
 		<hr/>
 
 		<p>
 			Source: <a href="https://github.com/dfkt/mathfont">https://github.com/dfkt/mathfont</a><br/>
-			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols (U+1D400–1D7FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms (U+FF00–FFEF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Regional_Indicator_Symbol">Regional Indicator Symbols (U+1F1E6–1F1FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Cherokee_%28Unicode_block%29">Cherokee (U+13A0–13F4)</a>
+			References: <a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols">Mathematical Alphanumeric Symbols (U+1D400–1D7FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> &middot; <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms (U+FF00–FFEF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Regional_Indicator_Symbol">Regional Indicator Symbols (U+1F1E6–1F1FF)</a> &middot; <a href="https://en.wikipedia.org/wiki/Cherokee_%28Unicode_block%29">Cherokee (U+13A0–13F4)</a> &middot; <a href="https://en.wikipedia.org/wiki/Runic_(Unicode_block)">Runic (U+16A0-16FF)</a>
 		</p>
 
 	</body>
